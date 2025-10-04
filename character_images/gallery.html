@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murder at the Ministry - Character Gallery</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #f4e4c1;
+            font-family: 'Garamond', 'Georgia', serif;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            text-shadow: 3px 3px 6px #000;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #f4e4c1;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        .gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .character-card {
+            background: rgba(0, 0, 0, 0.4);
+            border: 3px solid #ffd700;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+        .character-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(255,215,0,0.3);
+            border-color: #fff;
+        }
+        .character-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-bottom: 2px solid #ffd700;
+        }
+        .character-info {
+            padding: 15px;
+        }
+        .character-name {
+            color: #ffd700;
+            font-size: 1.2em;
+            margin: 0 0 5px 0;
+            text-shadow: 1px 1px 2px #000;
+        }
+        .character-title {
+            color: #b8b8b8;
+            font-size: 0.9em;
+            font-style: italic;
+            margin: 0;
+        }
+        .suspect-badge {
+            background: linear-gradient(135deg, #8b0000, #dc143c);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.75em;
+            display: inline-block;
+            margin-top: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .impostor-badge {
+            background: linear-gradient(135deg, #4b0082, #8a2be2);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.75em;
+            display: inline-block;
+            margin-top: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+            50% { box-shadow: 0 2px 8px rgba(138,43,226,0.6); }
+            100% { box-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        }
+        .instructions {
+            background: rgba(0,0,0,0.6);
+            border: 2px solid #ffd700;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .instructions h2 {
+            color: #ffd700;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <h1>🔮 Murder at the Ministry 🔮</h1>
+        <p class="subtitle">Character Portrait Gallery - Keep the Impostor's Identity Secret!</p>
+        
+        <div class="instructions">
+            <h2>📋 Host Instructions</h2>
+            <p>These character portraits can be printed and included with each character's dossier.</p>
+            <p>They can also be displayed during the game for atmosphere and reference.</p>
+            <p><strong>⚠️ WARNING:</strong> Do not reveal Agent Vale's true identity to players!</p>
+        </div>
+        
+        <div class="character-grid">
+
+            <div class="character-card">
+                <img src="01_minister_odran_pyke.png" alt="Minister Odran Pyke" onerror="this.src='placeholder.png'">
+                <div class="character-info">
+                    <h3 class="character-name">Minister Odran Pyke</h3>
+                    <p class="character-title">Acting Minister of Wonders</p>
+                    <span class="suspect-badge">SUSPECT</span>
+                </div>
+            </div>
+        
+            <div class="character-card">
+                <img src="02_commander_brina_keats.png" alt="Commander Brina Keats" onerror="this.src='placeholder.png'">
+                <div class="character-info">
+                    <h3 class="character-name">Commander Brina Keats</h3>
+                    <p class="character-title">Head of Magical Law Enforcement</p>
+                    <span class="suspect-badge">SUSPECT</span>
+                </div>
+            </div>
+        
+            <div class="character-card">
+                <img src="03_archivist_nella_vane.png" alt="Archivist Nella Vane" onerror="this.src='placeholder.png'">
+                <div class="character-info">
+                    <h3 class="character-name">Archivist Nella Vane</h3>
+                    <p class="character-title">Keeper of Magical Records</p>
+                    <span class="suspect-badge">SUSPECT</span>
+                </div>
+            </div>
+        
+            <div class="character-card">
+                <img src="04_healer_corwin_dredge.png" alt="Healer Corwin Dredge" onerror="this.src='placeholder.png'">
+                <div class="character-info">
+                    <h3 class="character-name">Healer Corwin Dredge</h3>
+                    <p class="character-title">Chief Medi-Wizard</p>
+                    <span class="suspect-badge">SUSPECT</span>
+                </div>
+            </div>
+        
+            <div class="character-card">
+                <img src="05_inquisitor_selwyn_march.png" alt="Inquisitor Selwyn March" onerror="this.src='placeholder.png'">
+                <div class="character-info">
+                    <h3 class="character-name">Inquisitor Selwyn March</h3>
+                    <p class="character-title">Integrity Division</p>
+                    <span class="suspect-badge">SUSPECT</span>
+                </div>
+            </div>
+        
+            <div class="character-card">
+                <img src="06_magizoologist_elara_finn.png" alt="Elara Finn" onerror="this.src='placeholder.png'">
+                <div class="character-info">
+                    <h3 class="character-name">Elara Finn</h3>
+                    <p class="character-title">Department of Creature Relations</p>
+                    <span class="suspect-badge">SUSPECT</span>
+                </div>
+            </div>
+        
+            <div class="character-card">
+                <img src="07_curator_theon_bales.png" alt="Curator Theon Bales" onerror="this.src='placeholder.png'">
+                <div class="character-info">
+                    <h3 class="character-name">Curator Theon Bales</h3>
+                    <p class="character-title">Hall of Magical Artifacts</p>
+                    <span class="suspect-badge">SUSPECT</span>
+                </div>
+            </div>
+        
+            <div class="character-card">
+                <img src="08_correspondent_lyra_quill.png" alt="Lyra Quill" onerror="this.src='placeholder.png'">
+                <div class="character-info">
+                    <h3 class="character-name">Lyra Quill</h3>
+                    <p class="character-title">Prophet Correspondent</p>
+                    <span class="suspect-badge">SUSPECT</span>
+                </div>
+            </div>
+        
+            <div class="character-card">
+                <img src="09_wandwright_cassian_thorn.png" alt="Cassian Thorn" onerror="this.src='placeholder.png'">
+                <div class="character-info">
+                    <h3 class="character-name">Cassian Thorn</h3>
+                    <p class="character-title">Magical Equipment Division</p>
+                    <span class="suspect-badge">SUSPECT</span>
+                </div>
+            </div>
+        
+            <div class="character-card">
+                <img src="10_unspeakable_dorian_mire.png" alt="Dorian Mire" onerror="this.src='placeholder.png'">
+                <div class="character-info">
+                    <h3 class="character-name">Dorian Mire</h3>
+                    <p class="character-title">Hall of Time - Temporal Research</p>
+                    <span class="suspect-badge">SUSPECT</span>
+                </div>
+            </div>
+        
+            <div class="character-card">
+                <img src="11_enchanter_vexa_rune.png" alt="Vexa Rune" onerror="this.src='placeholder.png'">
+                <div class="character-info">
+                    <h3 class="character-name">Vexa Rune</h3>
+                    <p class="character-title">Experimental Spellcraft Division</p>
+                    <span class="suspect-badge">SUSPECT</span>
+                </div>
+            </div>
+        
+            <div class="character-card">
+                <img src="12_agent_merin_vale.png" alt="Agent Merin Vale" onerror="this.src='placeholder.png'">
+                <div class="character-info">
+                    <h3 class="character-name">Agent Merin Vale</h3>
+                    <p class="character-title">Special Operations Liaison</p>
+                    <span class="impostor-badge">THE IMPOSTOR</span>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</body>
+</html>
