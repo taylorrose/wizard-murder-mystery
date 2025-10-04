@@ -23,11 +23,24 @@ This guide allows you, the host, to participate as a character while running the
 ## Pre-Game Setup (45 minutes)
 
 ### Materials Needed
+
+#### Option A: Traditional Paper Version
 - [ ] This complete game kit (7 documents)
 - [ ] 12 envelopes labeled with character names
 - [ ] 3 evidence envelopes labeled "Round 1," "Round 2," "Round 3"
 - [ ] Name badges or placards
 - [ ] Pencils and notepads for each player
+- [ ] Timer or clock
+- [ ] Optional: atmospheric music playlist
+- [ ] Optional: British-style refreshments
+
+#### Option B: Digital Projection Version
+- [ ] Character sheets (printed or sent digitally to players)
+- [ ] Computer/tablet with evidence HTML files
+- [ ] Projector or large screen/TV
+- [ ] Open `evidence_images/index.html` in browser
+- [ ] Name badges or digital name displays
+- [ ] Note-taking method for each player
 - [ ] Timer or clock
 - [ ] Optional: atmospheric music playlist
 - [ ] Optional: British-style refreshments
@@ -40,13 +53,24 @@ This guide allows you, the host, to participate as a character while running the
 5. **DO NOT READ** the character sheets if you wish to play
 
 ### Evidence Preparation
+
+#### Paper Version:
 1. **Print EVIDENCE_PACK** (Document 04)
 2. **Cut evidence items** along the marked lines
 3. **Sort by round** (Evidence A, B, C as marked)
 4. **Place in three separate envelopes** labeled Round 1, 2, and 3
 5. **Keep sealed** until the script directs you to distribute
 
+#### Digital Version:
+1. **Open `evidence_images/index.html`** in your browser
+2. **Connect to projector/screen** before game starts
+3. **Test navigation** - evidence is organized by rounds
+4. **Keep browser tab ready** but minimized until needed
+5. **Display evidence** on screen when script indicates
+
 ### Room Setup
+
+#### Paper Version:
 ```
     [Evidence Table]
          |
@@ -60,6 +84,30 @@ This guide allows you, the host, to participate as a character while running the
 - Keep your narrator scripts easily accessible
 - Dim lighting enhances atmosphere (ensure readability)
 
+#### Digital Version:
+```
+    [Projector Screen/TV]
+         |
+    [Circle of Chairs/Standing Space]
+         |
+    [Host Position with Computer]
+```
+
+- Position screen where all players can see clearly
+- Test projection/display before players arrive
+- Keep evidence browser tab ready but hidden
+- Have backup plan if technology fails (phone/tablet)
+- Ensure room lighting allows screen visibility
+
+### Using Digital Evidence Presentation
+
+The `evidence_images/index.html` file provides a gallery view of all evidence:
+- **Round 1 Evidence:** Display A1-A3 images when script indicates
+- **Round 2 Evidence:** Display B1-B4 images at appropriate time
+- **Round 3 Evidence:** Display C1-C4 images for final round
+- **Navigation:** Click images to enlarge, use browser back to return
+- **Tip:** Players can photograph evidence with phones for reference
+
 ## Game Flow Overview
 
 ### Opening (15 minutes)
@@ -70,13 +118,13 @@ This guide allows you, the host, to participate as a character while running the
 
 ### Round 1: Gathering Shadows (35-45 minutes)
 - Opening narration
-- Distribute Evidence A at 10-minute mark
+- Distribute Evidence A at 10-minute mark (paper) OR display Round 1 evidence on screen (digital)
 - Players establish alibis and relationships
 - 5-minute warning before round end
 
 ### Round 2: Unraveling Lies (35-45 minutes)
 - Transition narration
-- Distribute Evidence B at 15-minute mark
+- Distribute Evidence B at 15-minute mark (paper) OR display Round 2 evidence on screen (digital)
 - Confrontations and alliances form
 - 5-minute warning before round end
 
@@ -86,7 +134,7 @@ This guide allows you, the host, to participate as a character while running the
 
 ### Round 3: The Truth Revealed (30-40 minutes)
 - Climax narration
-- Distribute Evidence C immediately
+- Distribute Evidence C immediately (paper) OR display Round 3 evidence on screen (digital)
 - Final accusations
 - Group vote on impostor/murderer
 

@@ -1,56 +1,46 @@
-# Evidence Image Generation Guide
-*Murder at the Ministry - Visual Evidence Creation*
+# Evidence Images - Digital Presentation & Print Guide
+*Murder at the Ministry - Visual Evidence for Screen or Paper*
 
 ## 🎨 Overview
-This script generates professional-quality visual evidence pieces for the Murder at the Ministry mystery game using OpenAI's GPT Image API. Each piece is designed with atmospheric, wizard-world aesthetics matching the game's serious tone.
+The evidence images enhance your murder mystery game through visual clues. You can either **project them digitally on a screen** for a modern, eco-friendly experience, or **print them traditionally** for a tactile investigation. All images are pre-generated and ready to use!
 
-## 📦 Setup
+## 🖥️ Digital Presentation (Recommended)
 
-### 1. Install Dependencies
-```bash
-pip install openai
-```
+### Quick Setup for Screen Display:
+1. **Open Browser:** Navigate to `evidence_images/index.html`
+2. **Connect Display:** Hook up projector, TV, or large monitor
+3. **Test Images:** Click through evidence to ensure everything displays
+4. **During Game:** Display evidence on screen as each round progresses
 
-### 2. Run the Generator
+### Advantages of Digital:
+- **No printing costs** - Eco-friendly and budget-conscious
+- **High visual impact** - Large, clear images everyone can see
+- **Easy pacing** - Click to reveal evidence at perfect moments
+- **Player photos** - Let players photograph evidence with phones
+- **Reusable** - Run multiple games without wear and tear
 
-#### Quick Start (Recommended)
-```bash
-# Fast concurrent generation with auto-retry
-./generate_evidence.sh
+### How to Use During Game:
+1. **Before game:** Open index.html, minimize browser
+2. **Round 1:** When script says "distribute evidence," display A1-A3 images
+3. **Round 2:** Show B1-B4 images when investigation deepens
+4. **Round 3:** Reveal C1-C4 images for final deductions
+5. **Tip:** Players can photograph evidence to keep notes
 
-# Ultra-fast mode (8 parallel workers)
-./generate_evidence.sh --fast
-```
+## 🖨️ Traditional Print Option
 
-#### Advanced Options
-```bash
-# Generate all evidence images (concurrent, 5 workers)
-python generate_evidence_images.py
+### Printing Tips:
+1. **Paper:** Use cream or beige cardstock (65-80 lb)
+2. **Size:** Images are 1024x1024px for consistent printing
+3. **Enhancement:** After printing, lightly tea-stain edges for extra authenticity
+4. **Presentation:** Place in aged envelopes or clear protective sleeves
 
-# Generate with custom worker count
-python generate_evidence_images.py --workers 8
+### Print Settings:
+- **Quality:** High/Best
+- **Color:** Full color (consider slight sepia adjustment)
+- **Scale:** Fit to page or actual size
+- **Orientation:** Auto-select
 
-# Sequential generation (slower but stable)
-python generate_evidence_images.py --sequential
-
-# Auto-retry failed images
-python generate_evidence_images.py --retry
-
-# Generate a specific evidence piece
-python generate_evidence_images.py A1_potion_vial_label
-```
-
-### ⚡ Performance Comparison
-
-| Method | Workers | Time Estimate | Stability |
-|--------|---------|--------------|-----------|
-| Concurrent (default) | 5 | 30-60 seconds | High |
-| Fast mode | 8 | 20-40 seconds | Medium |
-| Sequential | 1 | 3-5 minutes | Highest |
-
-The concurrent generation is **5-10x faster** than sequential!
-
-## 🖼️ Generated Evidence Pieces
+## 🖼️ Evidence Pieces by Round
 
 ### Round 1 Evidence (Initial Discovery)
 - **A1_potion_vial_label** - Torn Transmorph Potion label with partial authorization
@@ -75,9 +65,59 @@ The concurrent generation is **5-10x faster** than sequential!
 - **transmorph_vial** - Close-up of the color-shifting potion
 - **evidence_envelope** - Official evidence storage envelope
 
-## 🎭 Visual Design Philosophy
+## 🎯 Integration with Game
 
-Each evidence piece is crafted with:
+### Digital Evidence Timing:
+1. **Round 1:** Display A1-A3 images on screen when script indicates
+2. **Round 2:** Show B1-B4 images as investigation deepens
+3. **Round 3:** Reveal C1-C4 images for final deductions
+4. **Navigation:** Use index.html to quickly access correct round
+
+### Paper Evidence Distribution:
+1. **Round 1:** Print A1-A3, place in "Evidence A" envelope
+2. **Round 2:** Print B1-B4, place in "Evidence B" envelope
+3. **Round 3:** Print C1-C4, place in "Evidence C" envelope
+4. **Extras:** Use additional pieces for atmosphere or props
+
+## 🎭 Display Options
+
+### Digital Projection (Modern Approach):
+- **Main Screen:** Project evidence on wall/screen for all to see
+- **TV Display:** Use large TV in living room setting
+- **Multiple Devices:** Share screen to tablets/phones
+- **Hybrid Approach:** Project main evidence, let players photo for notes
+
+### Traditional Paper (Classic Feel):
+- **Investigation Board:** Pin to corkboard as discovered
+- **Evidence Table:** Lay out for examination
+- **Individual Handouts:** Pass around during investigation
+- **Evidence Packets:** Pre-sort into round envelopes
+
+## 📁 File Structure
+
+```
+evidence_images/
+├── A1_potion_vial_label.png
+├── A2_medical_report.png
+├── A3_security_log.png
+├── B1_notebook_page.png
+├── B2_wand_analysis.png
+├── B3_burned_message.png
+├── B4_apothecary_receipt.png
+├── C1_temporal_card.png
+├── C2_mirror_alert.png
+├── C3_minister_journal.png
+├── C4_unmasking_spell.png
+├── ministry_seal.png
+├── crime_scene_photo.png
+├── transmorph_vial.png
+├── evidence_envelope.png
+└── index.html (gallery for digital display)
+```
+
+## 🎨 Visual Design Elements
+
+Each evidence piece features:
 
 ### Authentic Aging Effects
 - Torn edges and burn marks
@@ -97,122 +137,53 @@ Each evidence piece is crafted with:
 - Parchment and aged paper textures
 - Fountain pen cursive writing
 
-## 📁 Output Structure
-
-```
-evidence_images/
-├── A1_potion_vial_label.png
-├── A2_medical_report.png
-├── A3_security_log.png
-├── B1_notebook_page.png
-├── B2_wand_analysis.png
-├── B3_burned_message.png
-├── B4_apothecary_receipt.png
-├── C1_temporal_card.png
-├── C2_mirror_alert.png
-├── C3_minister_journal.png
-├── C4_unmasking_spell.png
-├── ministry_seal.png
-├── crime_scene_photo.png
-├── transmorph_vial.png
-├── evidence_envelope.png
-└── index.html (preview gallery)
-```
-
-## 🖨️ Printing Tips
-
-### For Best Results:
-1. **Paper:** Use cream or beige cardstock (65-80 lb)
-2. **Size:** Images are 1024x1024px for consistent printing
-3. **Enhancement:** After printing, lightly tea-stain edges for extra authenticity
-4. **Presentation:** Place in aged envelopes or clear protective sleeves
-
-### Print Settings:
-- **Quality:** High/Best
-- **Color:** Full color (consider slight sepia adjustment)
-- **Scale:** Fit to page or actual size
-- **Orientation:** Auto-select
-
-## 🎯 Integration with Game
-
-### Evidence Distribution:
-1. **Round 1:** Print A1-A3, place in "Evidence A" envelope
-2. **Round 2:** Print B1-B4, place in "Evidence B" envelope
-3. **Round 3:** Print C1-C4, place in "Evidence C" envelope
-4. **Extras:** Use additional pieces for atmosphere or props
-
-### Display Options:
-- **Investigation Board:** Pin to corkboard as discovered
-- **Evidence Table:** Lay out for examination
-- **Individual Handouts:** Pass around during investigation
-- **Digital Display:** Show on tablet/laptop if preferred
-
-## 🔧 Customization
-
-### Modify Prompts:
-Edit the `EVIDENCE_PIECES` array in `generate_evidence_images.py` to adjust:
-- Visual style and atmosphere
-- Specific text content shown
-- Damage and aging effects
-- Magical enhancement levels
-
-### Quality Settings:
-```python
-# In generate_image() function:
-quality="high"  # Options: "low", "medium", "high"
-size="1024x1024"  # Options: "1024x1024", "1024x1536", "1536x1024"
-```
-
 ## 💡 Tips for Success
 
-### API Usage:
-- **Concurrent Mode:** Generates up to 5-8 images simultaneously for 5-10x speed boost
-- **Auto-retry:** Failed images are automatically retried with `--retry` flag
-- **Rate Limiting:** Built-in delays prevent API throttling
-- **Single Pieces:** Individual evidence can be regenerated on demand
+### For Digital Display:
+- Test your setup before players arrive
+- Have a backup device ready (tablet/laptop)
+- Adjust room lighting for screen visibility
+- Consider background music for atmosphere
+- Let players know they can photo evidence
 
-### Performance Optimization:
-- **Default (5 workers):** Best balance of speed and stability
-- **Fast Mode (8 workers):** Maximum speed, may hit rate limits
-- **Sequential Mode:** Use if experiencing API errors
-- **Progress Tracking:** Real-time updates show completion status
-
-### Visual Cohesion:
-- All pieces maintain consistent wizard-world aesthetic
-- Color palette emphasizes purples, golds, and aged browns
-- Lighting suggests mystery and investigation
-
-### Enhanced Immersion:
-- Print on textured paper for tactile authenticity
-- Use LED candles near evidence for dramatic effect
+### For Printed Version:
+- Print a test page first to check colors
 - Consider laminating frequently-handled pieces
 - Create "evidence bags" with case numbers
+- Use LED candles near evidence for effect
+- Have extra copies of crucial evidence
 
-## 🎨 Preview Gallery
+## 🎬 Preview Gallery
 
-After generation, open `evidence_images/index.html` in your browser to:
+Open `evidence_images/index.html` in your browser to:
 - Preview all generated evidence
-- Check quality and consistency
-- Plan your printing order
-- Show players digitally if needed
+- Test your display setup
+- Familiarize yourself with navigation
+- Check image quality on your screen
 
-## ⚠️ Troubleshooting
+## ⚙️ Hybrid Approach
 
-### If generation fails:
-1. Check API key is valid and has credits
-2. Ensure internet connection is stable
-3. Try regenerating individual pieces
-4. Reduce quality setting if timeout occurs
+Mix digital and physical for best of both worlds:
+1. **Project key evidence** on main screen
+2. **Print character sheets** for personal reference
+3. **Use phones/tablets** for players to review evidence
+4. **Physical props** for special moments (wand, potion bottle)
 
-### If images look wrong:
-1. Review the prompt for that specific piece
-2. Regenerate with adjusted description
-3. Try different quality settings
-4. Check output resolution matches needs
+## 🏁 Quick Start Checklist
 
-## 📝 License & Attribution
+### Digital Game:
+- [ ] Computer/device with browser
+- [ ] Display (projector/TV/monitor)
+- [ ] Open evidence_images/index.html
+- [ ] Test all images load properly
+- [ ] Check room lighting
 
-Images generated using OpenAI's GPT Image API. The game content and prompts are original creative works for the Murder at the Ministry parody game.
+### Paper Game:
+- [ ] Print all evidence images
+- [ ] Sort into round envelopes
+- [ ] Print character sheets
+- [ ] Prepare evidence table
+- [ ] Optional: age/weather papers
 
 ---
 
