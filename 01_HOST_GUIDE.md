@@ -25,14 +25,18 @@ This guide allows you, the host, to participate as a character while running the
 ### Materials Needed
 
 #### Option A: Traditional Paper Version
-- [ ] This complete game kit (7 documents)
+- [ ] This complete game kit (now 10 documents with scoring)
 - [ ] 12 envelopes labeled with character names
 - [ ] 3 evidence envelopes labeled "Round 1," "Round 2," "Round 3"
 - [ ] Name badges or placards
 - [ ] Pencils and notepads for each player
 - [ ] Timer or clock
+- [ ] **NEW: Player score sheets (Document 10, 1 per player)**
+- [ ] **NEW: Secret objective cards (Document 09, sealed)**
+- [ ] **NEW: Host master tracking sheet (Document 10)**
 - [ ] Optional: atmospheric music playlist
 - [ ] Optional: British-style refreshments
+- [ ] Optional: Small prizes for winners
 
 #### Option B: Digital Projection Version
 - [ ] Character sheets (printed or sent digitally to players)
@@ -42,15 +46,22 @@ This guide allows you, the host, to participate as a character while running the
 - [ ] Name badges or digital name displays
 - [ ] Note-taking method for each player
 - [ ] Timer or clock
+- [ ] **NEW: Player score sheets (Document 10, 1 per player)**
+- [ ] **NEW: Secret objective cards (Document 09, sealed)**
+- [ ] **NEW: Host master tracking sheet (Document 10)**
 - [ ] Optional: atmospheric music playlist
 - [ ] Optional: British-style refreshments
+- [ ] Optional: Small prizes for winners
 
 ### Character Packet Preparation
 1. **Print CHARACTER_DOSSIERS** (Document 03)
 2. **Cut along dotted lines** to separate each character sheet
 3. **CRITICAL:** For Agent Merin Vale's packet, there is a sealed section marked "TRANSMORPH SECRET - DO NOT OPEN." Place this in a separate small envelope within Vale's main envelope
-4. **Insert character sheets** into labeled envelopes
-5. **DO NOT READ** the character sheets if you wish to play
+4. **NEW: Print SECRET_OBJECTIVES** (Document 09)
+5. **Cut and seal** each character's secret objectives separately
+6. **Insert character sheets AND sealed objectives** into labeled envelopes
+7. **Include a player score sheet** (Document 10) in each envelope
+8. **DO NOT READ** the character sheets if you wish to play
 
 ### Evidence Preparation
 
@@ -138,9 +149,13 @@ The `evidence_images/index.html` file provides a gallery view of all evidence:
 - Final accusations
 - Group vote on impostor/murderer
 
-### Reveal & Epilogue (15 minutes)
+### Reveal & Epilogue (25-30 minutes with scoring)
 - Read unmasking script
 - Open REVEAL_EPILOGUE only now
+- **NEW: Scoring Phase (10-15 minutes)**
+  - Distribute player score sheets if not done earlier
+  - Guide through scoring process (see Scoring Procedures below)
+  - Calculate and announce winners
 - Resolution and epilogue
 
 ## Narrator Instructions
@@ -251,6 +266,60 @@ A: Call a pause. Check in privately. They can observe or leave if needed.
 **Q: Multiple players tie in voting?**
 A: Have tied players make final statements, then revote excluding them.
 
+## Scoring Procedures (Competitive Mode)
+
+### Setup
+1. **At Game Start:**
+   - Distribute player score sheets with character dossiers
+   - Give each player their sealed secret objectives card
+   - Explain scoring will happen after the reveal
+   - Have master tracking sheet ready
+
+2. **During Play:**
+   - Track completion of public objectives discretely
+   - Note "first to discover" for evidence pieces
+   - Mark alliance formations and key accusations
+   - Don't announce points during play
+
+### Scoring Phase Process
+1. **Reveal Results (2 minutes)**
+   - Announce impostor and murderer identities
+   - Let initial reactions happen
+
+2. **Core Mystery Points (3 minutes)**
+   - Ask who correctly identified impostor (5 pts)
+   - Ask who correctly identified murderer (5 pts)
+   - Award first correct accusation bonus (2 pts)
+   - Confirm alibis and defenses
+
+3. **Public Objectives (5 minutes)**
+   - Go through each round's objectives
+   - Players claim completed objectives
+   - Quick group confirmation for disputed claims
+   - Mark on master sheet
+
+4. **Secret Objectives (5 minutes)**
+   - Players open sealed objectives
+   - Each player reads theirs aloud
+   - Brief explanation of completion
+   - Award points (group votes on disputes)
+
+5. **Special Awards (3 minutes)**
+   - Nominate candidates for each award
+   - Quick vote by show of hands
+   - Award 2 points each
+
+6. **Final Calculation (2 minutes)**
+   - Players total their sheets
+   - Apply role multipliers if applicable
+   - Announce final scores and winner
+
+### Scoring Tips
+- Keep pace brisk but allow for laughs
+- For disputes, use quick majority vote
+- If tied for winner, use tiebreaker: most investigation points
+- Consider small prizes: "Best Detective" certificate, etc.
+
 ## Final Host Reminders
 
 1. **Trust the structure** - The evidence revelation is carefully paced
@@ -258,6 +327,7 @@ A: Have tied players make final statements, then revote excluding them.
 3. **Have fun** - Your energy sets the tone
 4. **When in doubt** - "What would your character do?"
 5. **The impostor revelation** should surprise even you!
+6. **NEW: Track objectives** - Keep your master sheet handy during play
 
 ---
 
