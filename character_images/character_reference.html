@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murder at the Ministry - Character Reference Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Crimson Text', Georgia, serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%);
+            color: #e8d4b0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            border: 2px solid #8b6914;
+        }
+        
+        h1 {
+            font-size: 3em;
+            color: #d4af37;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            color: #b8936d;
+            font-style: italic;
+        }
+        
+        .instructions {
+            background: rgba(139, 105, 20, 0.2);
+            border: 1px solid #8b6914;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        .instructions h2 {
+            color: #d4af37;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .instructions p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .character-card {
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid #8b6914;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .character-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            border-color: #d4af37;
+        }
+        
+        .character-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 2px solid #8b6914;
+        }
+        
+        .character-info {
+            padding: 20px;
+        }
+        
+        .character-name {
+            font-size: 1.5em;
+            color: #d4af37;
+            margin-bottom: 5px;
+        }
+        
+        .character-title {
+            font-size: 1.1em;
+            color: #b8936d;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .character-details {
+            background: rgba(139, 105, 20, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        
+        .detail-item {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .detail-label {
+            color: #d4af37;
+            font-weight: bold;
+            display: inline-block;
+            min-width: 100px;
+        }
+        
+        .relationships {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #8b6914;
+        }
+        
+        .relationship-list {
+            margin-top: 8px;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .modal-content {
+            position: relative;
+            background: linear-gradient(135deg, #2a2a3e 0%, #1a1a2e 100%);
+            margin: 5% auto;
+            padding: 30px;
+            border: 3px solid #d4af37;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.5);
+        }
+        
+        .close {
+            color: #d4af37;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .close:hover {
+            color: #fff;
+        }
+        
+        .modal-character-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #8b6914;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .quick-ref {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid #8b6914;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 30px auto;
+            max-width: 1200px;
+        }
+        
+        .quick-ref h3 {
+            color: #d4af37;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .department-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .department {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #8b6914;
+        }
+        
+        .department h4 {
+            color: #d4af37;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .department ul {
+            list-style: none;
+            padding-left: 10px;
+        }
+        
+        .department li {
+            margin-bottom: 5px;
+            color: #e8d4b0;
+        }
+        
+        @media (max-width: 768px) {
+            .character-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .modal-content {
+                margin: 10% auto;
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Murder at the Ministry</h1>
+        <p class="subtitle">Character Reference Guide</p>
+    </div>
+
+    <div class="instructions">
+        <h2>How to Use This Guide</h2>
+        <p>This reference contains PUBLIC information about each character that all players may know.</p>
+        <p>Click on any character card for more details about their role and relationships.</p>
+        <p><strong>Note:</strong> This guide contains no secrets or spoilers - only information that helps you remember who's who during gameplay.</p>
+    </div>
+
+    <div class="quick-ref">
+        <h3>Quick Department Reference</h3>
+        <div class="department-list">
+            <div class="department">
+                <h4>Leadership</h4>
+                <ul>
+                    <li>• Minister Aldric Thorne</li>
+                    <li>• Commander Brina Keats</li>
+                </ul>
+            </div>
+            <div class="department">
+                <h4>Investigation & Records</h4>
+                <ul>
+                    <li>• Inquisitor Selwyn March</li>
+                    <li>• Archivist Nella Vane</li>
+                    <li>• Agent Soren Blackwood</li>
+                </ul>
+            </div>
+            <div class="department">
+                <h4>Magical Services</h4>
+                <ul>
+                    <li>• Healer Corwin Dredge</li>
+                    <li>• Enchanter Vexa Rune</li>
+                    <li>• Wandwright Cassian Thorn</li>
+                </ul>
+            </div>
+            <div class="department">
+                <h4>Research & Archives</h4>
+                <ul>
+                    <li>• Curator Theon Bales</li>
+                    <li>• Unspeakable Dorian Mire</li>
+                    <li>• Magizoologist Elara Finn</li>
+                </ul>
+            </div>
+            <div class="department">
+                <h4>External Relations</h4>
+                <ul>
+                    <li>• Correspondent Lyra Quill</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="character-grid">
+        <!-- Minister -->
+        <div class="character-card" onclick="openModal('modal1')">
+            <img src="01_minister_aldric_thorne.png" alt="Minister" class="character-image">
+            <div class="character-info">
+                <h2 class="character-name">Minister Aldric Thorne</h2>
+                <p class="character-title">Acting Minister of Wonders</p>
+                <div class="character-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Department:</span> Executive Leadership
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Expertise:</span> Policy, Reform, Administration
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Access Level:</span> Highest Ministry Clearance
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Commander -->
+        <div class="character-card" onclick="openModal('modal2')">
+            <img src="02_commander_brina_keats.png" alt="Commander" class="character-image">
+            <div class="character-info">
+                <h2 class="character-name">Commander Brina Keats</h2>
+                <p class="character-title">Head of Magical Law Enforcement</p>
+                <div class="character-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Department:</span> Auror Office
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Expertise:</span> Security, Investigation, Defense
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Access Level:</span> Security Protocols & Systems
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Archivist -->
+        <div class="character-card" onclick="openModal('modal3')">
+            <img src="03_archivist_nella_vane.png" alt="Archivist" class="character-image">
+            <div class="character-info">
+                <h2 class="character-name">Archivist Nella Vane</h2>
+                <p class="character-title">Keeper of Magical Records</p>
+                <div class="character-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Department:</span> Archives & Records
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Expertise:</span> Historical Records, Memory, Documentation
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Special Ability:</span> Perfect Recall
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Healer -->
+        <div class="character-card" onclick="openModal('modal4')">
+            <img src="04_healer_corwin_dredge.png" alt="Healer" class="character-image">
+            <div class="character-info">
+                <h2 class="character-name">Healer Corwin Dredge</h2>
+                <p class="character-title">Chief Medi-Wizard</p>
+                <div class="character-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Department:</span> Medical Wing
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Expertise:</span> Magical Maladies, Potions, Forensics
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Special Role:</span> Examines the victim
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inquisitor -->
+        <div class="character-card" onclick="openModal('modal5')">
+            <img src="05_inquisitor_selwyn_march.png" alt="Inquisitor" class="character-image">
+            <div class="character-info">
+                <h2 class="character-name">Inquisitor Selwyn March</h2>
+                <p class="character-title">Internal Affairs Investigator</p>
+                <div class="character-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Department:</span> Integrity Division
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Expertise:</span> Corruption Investigation, Interrogation
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Reputation:</span> Trusts no one
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Magizoologist -->
+        <div class="character-card" onclick="openModal('modal6')">
+            <img src="06_magizoologist_elara_finn.png" alt="Magizoologist" class="character-image">
+            <div class="character-info">
+                <h2 class="character-name">Magizoologist Elara Finn</h2>
+                <p class="character-title">Creature Behavior Specialist</p>
+                <div class="character-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Department:</span> Creature Relations
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Expertise:</span> Magical Creatures, Rare Specimens
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Access:</span> Creature Containment Areas
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Curator -->
+        <div class="character-card" onclick="openModal('modal7')">
+            <img src="07_curator_theon_bales.png" alt="Curator" class="character-image">
+            <div class="character-info">
+                <h2 class="character-name">Curator Theon Bales</h2>
+                <p class="character-title">Keeper of Magical Artifacts</p>
+                <div class="character-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Department:</span> Hall of Magical Artifacts
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Expertise:</span> Ancient Artifacts, Magical Items
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Notable:</span> Mirror of Masks expert
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Correspondent -->
+        <div class="character-card" onclick="openModal('modal8')">
+            <img src="08_correspondent_lyra_quill.png" alt="Correspondent" class="character-image">
+            <div class="character-info">
+                <h2 class="character-name">Correspondent Lyra Quill</h2>
+                <p class="character-title">Prophet Investigative Journalist</p>
+                <div class="character-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Affiliation:</span> The Daily Prophet
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Expertise:</span> Investigation, Interviews, Exposés
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Motivation:</span> The story of the century
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wandwright -->
+        <div class="character-card" onclick="openModal('modal9')">
+            <img src="09_wandwright_cassian_thorn.png" alt="Wandwright" class="character-image">
+            <div class="character-info">
+                <h2 class="character-name">Wandwright Cassian Thorn</h2>
+                <p class="character-title">Master Wand Craftsman</p>
+                <div class="character-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Department:</span> Magical Equipment Division
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Expertise:</span> Wand Lore, Spell Traces, Wand Analysis
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Special Skill:</span> Can identify wand signatures
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Unspeakable -->
+        <div class="character-card" onclick="openModal('modal10')">
+            <img src="10_unspeakable_dorian_mire.png" alt="Unspeakable" class="character-image">
+            <div class="character-info">
+                <h2 class="character-name">Unspeakable Dorian Mire</h2>
+                <p class="character-title">Department of Mysteries Researcher</p>
+                <div class="character-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Department:</span> Hall of Time
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Expertise:</span> Temporal Magic, Classified Research
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Note:</span> Cannot discuss most work
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enchanter -->
+        <div class="character-card" onclick="openModal('modal11')">
+            <img src="11_enchanter_vexa_rune.png" alt="Enchanter" class="character-image">
+            <div class="character-info">
+                <h2 class="character-name">Enchanter Vexa Rune</h2>
+                <p class="character-title">Spell Development Specialist</p>
+                <div class="character-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Department:</span> Experimental Spellcraft
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Expertise:</span> Spell Creation, Magical Theory
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Recent Work:</span> Unmasking charms
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Agent -->
+        <div class="character-card" onclick="openModal('modal12')">
+            <img src="12_agent_soren_blackwood.png" alt="Agent" class="character-image">
+            <div class="character-info">
+                <h2 class="character-name">Agent Soren Blackwood</h2>
+                <p class="character-title">Special Operations Liaison</p>
+                <div class="character-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Department:</span> International Cooperation
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Expertise:</span> Covert Ops, Infiltration, Security
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Background:</span> Classified operations
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals for each character -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <img src="01_minister_aldric_thorne.png" alt="Minister" class="modal-character-image">
+            <h2 style="color: #d4af37;">Minister Aldric Thorne</h2>
+            <p style="font-style: italic; color: #b8936d; margin-bottom: 20px;">Acting Minister of Wonders</p>
+            <div class="character-details">
+                <p><strong>Background:</strong> Appointed six months ago after the previous Minister's mysterious disappearance. Known for implementing controversial transparency reforms.</p>
+                <p><strong>Personality:</strong> Ambitious, reform-minded, makes enemies among traditionalists.</p>
+                <p><strong>Key Relationships:</strong> Works closely with Commander Keats; often at odds with Inquisitor March; old friend of Curator Bales.</p>
+                <p><strong>Areas of Authority:</strong> Policy decisions, high-level clearances, interdepartmental coordination.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <img src="02_commander_brina_keats.png" alt="Commander" class="modal-character-image">
+            <h2 style="color: #d4af37;">Commander Brina Keats</h2>
+            <p style="font-style: italic; color: #b8936d; margin-bottom: 20px;">Head of Magical Law Enforcement</p>
+            <div class="character-details">
+                <p><strong>Background:</strong> Decorated Auror with 15 years of service. Rose through ranks after solving the Goblin Vault conspiracy.</p>
+                <p><strong>Personality:</strong> Methodical, loyal, by-the-book investigator.</p>
+                <p><strong>Key Relationships:</strong> Reports to Minister Thorne; oversees Agent Blackwood; respects Archivist Vane.</p>
+                <p><strong>Areas of Expertise:</strong> Security protocols, defensive magic, criminal investigation.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <img src="03_archivist_nella_vane.png" alt="Archivist" class="modal-character-image">
+            <h2 style="color: #d4af37;">Archivist Nella Vane</h2>
+            <p style="font-style: italic; color: #b8936d; margin-bottom: 20px;">Keeper of Magical Records</p>
+            <div class="character-details">
+                <p><strong>Background:</strong> Maintains vast archives of magical contracts, genealogies, and historical records. Has eidetic memory.</p>
+                <p><strong>Personality:</strong> Meticulous, knowledgeable, protective of information.</p>
+                <p><strong>Special Ability:</strong> Perfect Recall - can remember any document ever read.</p>
+                <p><strong>Areas of Knowledge:</strong> Employee records, historical precedents, magical lineages.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <img src="04_healer_corwin_dredge.png" alt="Healer" class="modal-character-image">
+            <h2 style="color: #d4af37;">Healer Corwin Dredge</h2>
+            <p style="font-style: italic; color: #b8936d; margin-bottom: 20px;">Chief Medi-Wizard</p>
+            <div class="character-details">
+                <p><strong>Background:</strong> Ministry's chief medical officer, responsible for employee health and forensic examination.</p>
+                <p><strong>Personality:</strong> Compassionate, bound by medical ethics, family-oriented.</p>
+                <p><strong>Tonight's Role:</strong> Performed preliminary examination of the victim.</p>
+                <p><strong>Areas of Expertise:</strong> Magical maladies, potion identification, cause of death analysis.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <img src="05_inquisitor_selwyn_march.png" alt="Inquisitor" class="modal-character-image">
+            <h2 style="color: #d4af37;">Inquisitor Selwyn March</h2>
+            <p style="font-style: italic; color: #b8936d; margin-bottom: 20px;">Internal Affairs Investigator</p>
+            <div class="character-details">
+                <p><strong>Background:</strong> Investigates corruption and misconduct within the Ministry itself.</p>
+                <p><strong>Personality:</strong> Suspicious of everyone, ruthless pursuit of truth, makes people nervous.</p>
+                <p><strong>Current Focus:</strong> Building cases against potential Ministry corruption.</p>
+                <p><strong>Reputation:</strong> Both respected and feared for uncompromising investigations.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal6')">&times;</span>
+            <img src="06_magizoologist_elara_finn.png" alt="Magizoologist" class="modal-character-image">
+            <h2 style="color: #d4af37;">Magizoologist Elara Finn</h2>
+            <p style="font-style: italic; color: #b8936d; margin-bottom: 20px;">Creature Behavior Specialist</p>
+            <div class="character-details">
+                <p><strong>Background:</strong> Studies magical creatures and their applications in magic.</p>
+                <p><strong>Personality:</strong> Enthusiastic about creatures, protective of research, somewhat scattered.</p>
+                <p><strong>Special Access:</strong> Rare creature specimens including metamorphmagus samples.</p>
+                <p><strong>Areas of Knowledge:</strong> Creature-based potion ingredients, behavioral patterns.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal7')">&times;</span>
+            <img src="07_curator_theon_bales.png" alt="Curator" class="modal-character-image">
+            <h2 style="color: #d4af37;">Curator Theon Bales</h2>
+            <p style="font-style: italic; color: #b8936d; margin-bottom: 20px;">Keeper of Magical Artifacts</p>
+            <div class="character-details">
+                <p><strong>Background:</strong> Manages the Ministry's collection of powerful magical artifacts.</p>
+                <p><strong>Personality:</strong> Nervous, eager to please, worried about reputation.</p>
+                <p><strong>Key Item:</strong> Oversees the Mirror of Masks (projects false appearances).</p>
+                <p><strong>Connection:</strong> Old friend of Minister Thorne who helped secure position.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal8')">&times;</span>
+            <img src="08_correspondent_lyra_quill.png" alt="Correspondent" class="modal-character-image">
+            <h2 style="color: #d4af37;">Correspondent Lyra Quill</h2>
+            <p style="font-style: italic; color: #b8936d; margin-bottom: 20px;">Prophet Investigative Journalist</p>
+            <div class="character-details">
+                <p><strong>Background:</strong> Investigative reporter for the Daily Prophet, here for exclusive Ministry tour.</p>
+                <p><strong>Personality:</strong> Persistent, observant, always seeking the story.</p>
+                <p><strong>Motivation:</strong> Wants to expose Ministry corruption and cover-ups.</p>
+                <p><strong>Reputation:</strong> Known for hard-hitting exposés and protecting sources.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal9" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal9')">&times;</span>
+            <img src="09_wandwright_cassian_thorn.png" alt="Wandwright" class="modal-character-image">
+            <h2 style="color: #d4af37;">Wandwright Cassian Thorn</h2>
+            <p style="font-style: italic; color: #b8936d; margin-bottom: 20px;">Master Wand Craftsman</p>
+            <div class="character-details">
+                <p><strong>Background:</strong> Expert in wand creation, maintenance, and analysis.</p>
+                <p><strong>Personality:</strong> Precise, secretive about clients, protective of craft.</p>
+                <p><strong>Special Skill:</strong> Can identify wands by their magical signatures.</p>
+                <p><strong>Key Knowledge:</strong> Understands wand tracking and modification techniques.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal10" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal10')">&times;</span>
+            <img src="10_unspeakable_dorian_mire.png" alt="Unspeakable" class="modal-character-image">
+            <h2 style="color: #d4af37;">Unspeakable Dorian Mire</h2>
+            <p style="font-style: italic; color: #b8936d; margin-bottom: 20px;">Department of Mysteries Researcher</p>
+            <div class="character-details">
+                <p><strong>Background:</strong> Works in the Hall of Time on classified temporal research.</p>
+                <p><strong>Personality:</strong> Cryptic, bound by secrecy oaths, speaks in riddles.</p>
+                <p><strong>Constraints:</strong> Cannot discuss most of their work due to classification.</p>
+                <p><strong>Specialty:</strong> Time magic, temporal anomalies, paradox prevention.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal11" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal11')">&times;</span>
+            <img src="11_enchanter_vexa_rune.png" alt="Enchanter" class="modal-character-image">
+            <h2 style="color: #d4af37;">Enchanter Vexa Rune</h2>
+            <p style="font-style: italic; color: #b8936d; margin-bottom: 20px;">Spell Development Specialist</p>
+            <div class="character-details">
+                <p><strong>Background:</strong> Creates and tests new spells for Ministry use.</p>
+                <p><strong>Personality:</strong> Brilliant, ambitious, wants recognition for work.</p>
+                <p><strong>Recent Project:</strong> Developed an unmasking charm on commission.</p>
+                <p><strong>Expertise:</strong> Spell mechanics, magical theory, charm detection.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal12" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal12')">&times;</span>
+            <img src="12_agent_soren_blackwood.png" alt="Agent" class="modal-character-image">
+            <h2 style="color: #d4af37;">Agent Soren Blackwood</h2>
+            <p style="font-style: italic; color: #b8936d; margin-bottom: 20px;">Special Operations Liaison</p>
+            <div class="character-details">
+                <p><strong>Background:</strong> Handles sensitive missions between departments. Five years of exemplary service.</p>
+                <p><strong>Personality:</strong> Professional, secretive, deflects personal questions.</p>
+                <p><strong>Expertise:</strong> Undercover work, infiltration, counter-intelligence.</p>
+                <p><strong>Note:</strong> Much of their work is classified and cannot be discussed.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target.className === "modal") {
+                event.target.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                const modals = document.getElementsByClassName("modal");
+                for (let modal of modals) {
+                    modal.style.display = "none";
+                }
+                document.body.style.overflow = "auto";
+            }
+        });
+    </script>
+</body>
+</html>
+
+

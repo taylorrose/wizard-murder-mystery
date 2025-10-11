@@ -7,14 +7,17 @@
 
 In this competitive version, you earn points through investigation, roleplay, and achieving objectives. The player with the highest score wins!
 
+**THE PRISONER'S DILEMMA:** Your secret objectives (worth 9 points total) require keeping secrets. But solving the case (worth 16+ points) often requires truth. Will you protect your guaranteed points or risk them for the bigger reward?
+
 ---
 
 ## Quick Point Overview
 
-### Big Points (5-10 each)
-- Correctly identify the impostor: **5 points**
-- Correctly identify the murderer: **5 points**
-- First to accuse correctly with evidence: **+2 bonus**
+### Big Points (8-10 each)
+- Correctly identify the impostor: **8 points**
+- Correctly identify the murderer: **8 points**
+- Group success bonus (majority gets it right): **+3 points**
+- First to accuse correctly with evidence: **+3 bonus**
 - Complete your secret objectives: **2-4 points each**
 
 ### Medium Points (2-3 each)
@@ -31,27 +34,39 @@ In this competitive version, you earn points through investigation, roleplay, an
 
 ---
 
+## Using Your Special Ability
+
+Each character has ONE special ability (Optional Spell Card):
+- **When:** Use it once at any time during investigation rounds
+- **How:** Announce clearly: "I'm using my special ability"
+- **Effect:** Follow your spell card's specific instructions
+- **Strategy:** Time it well - this can unlock objective points!
+
+---
+
 ## Public Objectives (Everyone Can See These)
 
-### Round 1: Gathering Shadows (1 point each)
+Global objectives cap: You may claim up to any two objectives in each category (Round 1, Round 2, Round 3, Social). You can do more for story, but only two score in each.
+
+### Round 1: Gathering Shadows (1 point each - claim any 2)
 ✓ Establish your timeline for 7:00-8:00 PM  
 ✓ Learn 2 other players' claimed locations  
 ✓ Identify someone with restricted access  
 ✓ Share or discover evidence  
 
-### Round 2: Unraveling Lies (2 points each)
+### Round 2: Unraveling Lies (2 points each - claim any 2)
 ✓ Expose a contradiction in someone's story  
 ✓ Form an alliance with another player  
 ✓ Correctly identify a spell or potion's effects  
 ✓ Get someone to admit to a secret  
 
-### Round 3: The Truth Revealed (3 points each)
+### Round 3: The Truth Revealed (3 points each - claim any 2)
 ✓ Present a complete theory of the crime  
 ✓ Rally 2+ players to your theory  
 ✓ Correctly predict who will be most suspected  
-✓ Use your special ability effectively  
+✓ Use your special ability effectively (must have visible impact)  
 
-### Social Objectives (1 point each, max 5 total)
+### Social Objectives (1 point each - claim any 2)
 ✓ Get elected as group spokesperson  
 ✓ Mediate a heated argument  
 ✓ Extract a private confession  

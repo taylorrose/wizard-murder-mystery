@@ -1,17 +1,19 @@
 # Secret Objective Cards
 *Print, cut, and distribute with character dossiers - Keep hidden until scoring!*
 
+Note: Public objectives are capped at two claims per category (Round 1, Round 2, Round 3, Social). Secret objectives are scored as written.
+
 ---
 
-## Minister Odran Pyke
+## Minister Aldric Thorne
 
 ### SECRET OBJECTIVES - DO NOT REVEAL UNTIL SCORING
 
 **Political Survival (4 points)**  
-Keep the Transmorph authorization secret through Round 2. If no one mentions your signature on the potion order, you succeed.
+When Evidence A-1 (potion label) shows "Authorization: A. Th...", deflect suspicion successfully. No one should directly accuse you of authorizing it by Round 2's end.
 
 **Maintain Authority (3 points)**  
-Never be voted as "most suspicious" in any round. Your position must remain respected.
+Avoid being pointed to as "most suspicious" during the round-end suspicion votes. Your position must remain respected.
 
 **Deflect Upward (2 points)**  
 Successfully argue that the crime indicates corruption above your level (previous Minister, etc.) without being contradicted.
@@ -38,7 +40,7 @@ Be part of the group that correctly identifies either the impostor OR murderer (
 ### SECRET OBJECTIVES - DO NOT REVEAL UNTIL SCORING
 
 **Memory Master (4 points)**  
-Use your Perfect Recall ability to establish a "fact" that becomes crucial to solving the case.
+Use your Perfect Recall ability to establish a fact about Evidence B-1 (Bodd's notebook mentioning "M. Cross") or Evidence B-3 (burned message). The group must accept your "memory" as true.
 
 **Knowledge Broker (3 points)**  
 Be consulted by at least 4 different players about documents, procedures, or Ministry history.
@@ -53,7 +55,7 @@ Never have your testimony questioned or contradicted by evidence.
 ### SECRET OBJECTIVES - DO NOT REVEAL UNTIL SCORING
 
 **Medical Monopoly (4 points)**  
-Have your Diagnostic Charm result believed and acted upon by the group. Must influence a major decision.
+Use your Diagnostic Charm ability on Evidence A-2 (your own medical report) to reveal additional details. Have the group act on your medical expertise.
 
 **Hippocratic Oath (3 points)**  
 Publicly refuse to break medical confidentiality at least once, even under pressure.
@@ -68,7 +70,7 @@ If the vial theft is discovered, successfully argue it was for the greater good 
 ### SECRET OBJECTIVES - DO NOT REVEAL UNTIL SCORING
 
 **Case Closed (4 points)**  
-Have YOUR investigation theory be the one the group ultimately adopts for the final vote.
+Present a theory connecting Evidence B-1 (Bodd's cryptic "The Minister may not be the Minister") to the final revelation. Have at least 3 players support your interpretation.
 
 **Corruption Exposed (3 points)**  
 Reveal at least one piece of hidden Ministry corruption (any player's secret) before Round 3.
@@ -83,7 +85,7 @@ Never falsely accuse an innocent player of being the murderer or impostor.
 ### SECRET OBJECTIVES - DO NOT REVEAL UNTIL SCORING
 
 **Creature Credentials (4 points)**  
-Correctly explain how Metamorphmagus hair enhances Transmorph Potion without revealing you supplied it.
+When the Transmorph evidence surfaces (Evidence B-4 receipt shows Metamorphmagus hair), correctly explain its properties without revealing you supplied it.
 
 **Natural Intuition (3 points)**  
 Form an alliance with the player who ends up being least suspected by the group.
@@ -98,13 +100,13 @@ Provide an unexpected insight about non-creature evidence that proves correct.
 ### SECRET OBJECTIVES - DO NOT REVEAL UNTIL SCORING
 
 **Reputation Intact (4 points)**  
-Keep the Mirror of Masks theft secret while still explaining all artifact-related evidence accurately.
+When Evidence C-2 (Mirror alert) reveals the Mirror is missing from your vault, deflect blame while explaining how the Mirror works. Avoid being top suspect.
 
 **Donor Confidence (3 points)**  
 If the Mirror theft is revealed, convince the group it's unrelated to the murder.
 
 **Loyalty Test (2 points)**  
-When forced to choose between protecting Minister Pyke or revealing truth, make your choice count (either direction, but it must matter).
+When forced to choose between protecting Minister Thorne or revealing truth, make your choice count (either direction, but it must matter).
 
 ---
 
@@ -128,10 +130,10 @@ Change the group's vote on someone through a single persuasive speech.
 ### SECRET OBJECTIVES - DO NOT REVEAL UNTIL SCORING
 
 **Technical Integrity (4 points)**  
-Explain the modified wand evidence without revealing you could have made it. Must satisfy the Inquisitor.
+When Evidence B-2 (wand analysis) surfaces, explain the technical details without admitting you made it. The Inquisitor must not accuse you directly afterward.
 
 **Client Confidential (3 points)**  
-If pressed about Bodd's wand request, reveal the name "R. Kett" but maintain you don't know who that is.
+When pressed about the modified wand, reveal the buyer used the name "M. Cross" (connecting to Evidence B-4) but maintain you don't know who that is.
 
 **Craft Respected (2 points)**  
 Have your expertise acknowledged as essential to understanding the crime.
@@ -143,7 +145,7 @@ Have your expertise acknowledged as essential to understanding the crime.
 ### SECRET OBJECTIVES - DO NOT REVEAL UNTIL SCORING
 
 **Temporal Confusion (4 points)**  
-Successfully use "time moves differently in the Time Room" to maintain your alibi through all rounds.
+When Evidence C-1 (temporal resonance card) mentions time displacement, use your Time Room alibi to seem helpful rather than suspicious. Maintain this through all rounds.
 
 **Classified Project (3 points)**  
 Keep the true nature of your temporal memory project secret while hinting at "dangerous knowledge."
@@ -158,7 +160,7 @@ Make one prediction about what will be revealed that comes true (can be vague bu
 ### SECRET OBJECTIVES - DO NOT REVEAL UNTIL SCORING
 
 **Spell Mastery (4 points)**  
-Have the group successfully perform your unmasking spell AND have it work correctly.
+Have the group use the unmasking spell from Evidence C-4 that you created. Take credit for developing it.
 
 **Magical Authority (3 points)**  
 Be consulted on every piece of spell-related evidence by at least one player.
@@ -168,7 +170,7 @@ Reveal in Round 3 that you suspected this would happen and prepared accordingly 
 
 ---
 
-## Agent Merin Vale / Rowan Kett
+## Agent Soren Blackwood / Morgan Cross
 
 ### SECRET OBJECTIVES - DO NOT REVEAL UNTIL SCORING
 
@@ -176,7 +178,7 @@ Reveal in Round 3 that you suspected this would happen and prepared accordingly 
 Maintain your cover through the end of Round 2 without being in the top 3 suspects.
 
 **Misdirected Justice (3 points)**  
-Get Minister Pyke voted as most suspicious in any round.
+Get Minister Thorne pointed to by at least 3 players during any suspicion vote.
 
 **Doubt Cascade (2 points)**  
 Make at least 2 other players question their own identities or suggest others might be impostors too.

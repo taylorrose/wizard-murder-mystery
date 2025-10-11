@@ -45,7 +45,7 @@
 - Single-sided for easy cutting
 - Heavier paper (28-32 lb) if available
 - Cut along dotted lines precisely
-- **CRITICAL:** Separate Vale's Transmorph Secret immediately
+- **CRITICAL:** Separate Blackwood's Transmorph Secret immediately
 
 **Envelope Preparation:**
 ```
@@ -195,7 +195,7 @@ Cut line: ✂ - - - - - - - - -
    - Print all dossiers
    - Cut along guidelines
    - Insert into named envelopes
-   - Separate Vale's secret into sealed sub-envelope
+   - Separate Blackwood's secret into sealed sub-envelope
    - Stack alphabetically
 
 2. **Evidence Rounds**
@@ -296,7 +296,7 @@ Before printing everything, test with:
 
 ### Before Game Day:
 - [ ] All character names spelled consistently
-- [ ] Vale's secret properly separated
+- [ ] Blackwood's secret properly separated
 - [ ] Evidence sorted by correct rounds
 - [ ] No spoilers visible through envelopes
 - [ ] Host scripts easy to read in dim light

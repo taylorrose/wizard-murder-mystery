@@ -48,6 +48,9 @@
 
 **[HOST ACTION: Return to character if playing. Begin mingling]**
 
+**[HOST ACTION - PHASE PROMPT]**
+> "Remember: Two-Before-You and One-Question-Per-Turn tonight so everyone gets airtime. Start by trading timelines with two people."
+
 **[TIMER: Set for 10 minutes]**
 
 ### Evidence Distribution
@@ -79,7 +82,11 @@
 
 **[READ ALOUD]**
 
-> "The shadows deepen. We must delve deeper into the evidence. Take a moment to gather your thoughts. Who do you trust? Who do you suspect? The night is far from over."
+> "The shadows deepen. Before we continue, let us gauge the room's suspicions. Each of you, point to the person you find most suspicious at this moment."
+
+**[HOST ACTION: Quick suspicion vote - count but don't announce winner, just note for scoring]**
+
+> "Interesting... We must delve deeper into the evidence. Take a moment to gather your thoughts. Who do you trust? Who do you suspect? The night is far from over."
 
 **[OPTIONAL: 5-minute break]**
 
@@ -96,6 +103,9 @@
 > Some of you have not been truthful. Some of you cannot be who you claim. The Transmorph Potion's effects should be showing signs of strain by now. Watch carefully for tells—a flicker of wrong features, a momentary lapse in character, knowledge that shouldn't be possessed."
 
 **[HOST ACTION: Return to character]**
+
+**[HOST ACTION - PHASE PROMPT]**
+> "Rotate first speaker—if you led last round, invite someone else to kick us off. Find one contradiction or new connection before time."
 
 **[TIMER: Set for 15 minutes]**
 
@@ -133,7 +143,11 @@
 
 **[READ ALOUD]**
 
-> "The web of lies tangles ever tighter. In our final round, all masks must fall. Prepare yourselves for the truth—however terrible it may be."
+> "The web of lies tangles ever tighter. Again, let suspicions be known. Point to your prime suspect."
+
+**[HOST ACTION: Second suspicion vote - note for scoring]**
+
+> "The accusations mount. In our final round, all masks must fall. Prepare yourselves for the truth—however terrible it may be."
 
 **[OPTIONAL: 10-minute break]**
 
@@ -162,7 +176,10 @@
 
 > "The time for investigation ends. Each of you will now speak your truth—or your lies—one final time. State clearly: Who do you believe is the impostor? Who do you believe is the murderer? They may be the same person or different people."
 
-**[HOST ACTION: Go around the circle. Each player gets 30-60 seconds for their final statement]**
+**[HOST ACTION - PHASE PROMPT]**
+> "Write down your one-sentence theory now. Use this format: 'Impostor is X because ___. Murderer is Y because ___.' One sentence each."
+
+**[HOST ACTION: Start with a player who has spoken least this round. Go around the circle. Each player gets 30-60 seconds for their final statement]**
 
 ### The Voting
 **[After all statements]**

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Murder at the Ministry - Portrait Narration (Three-Portrait)</title>
+  <style>
+    body {
+      background: #2c1810;
+      color: #d4c4a0;
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #c9a961;
+      text-shadow: 2px 2px 4px #000;
+      border-bottom: 3px solid #c9a961;
+      padding-bottom: 10px;
+      margin-top: 0;
+    }
+    .portrait-showcase {
+      background: #1a0f08;
+      border: 3px solid #c9a961;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .portrait-image {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+    .portrait-caption {
+      margin-top: 12px;
+      color: #c9a961;
+      font-style: italic;
+      font-size: 1.1em;
+    }
+    .portrait-names {
+      margin-top: 8px;
+      color: #d4c4a0;
+      font-size: 0.95em;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .notice {
+      background: #4a6741;
+      color: #fff;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+    .controls {
+      background: #3d2817;
+      border: 2px solid #c9a961;
+      border-radius: 8px;
+      padding: 15px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .button-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    button, select, input[type="checkbox"]+label {
+      background: #2c1810;
+      color: #e8d7b9;
+      border: 1px solid #c9a961;
+      border-radius: 4px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    button:hover, select:hover {
+      background: #4d3820;
+    }
+    .playlist {
+      margin-top: 20px;
+      background: #3d2817;
+      border: 2px solid #c9a961;
+      border-radius: 8px;
+      padding: 10px;
+      max-height: 65vh;
+      overflow-y: auto;
+    }
+    .phase-section {
+      margin-bottom: 20px;
+    }
+    .phase-header {
+      background: #1a0f08;
+      color: #c9a961;
+      padding: 12px 15px;
+      margin: 10px -10px;
+      font-weight: bold;
+      font-size: 1.1em;
+      border-left: 4px solid #c9a961;
+      position: sticky;
+      top: -10px;
+      z-index: 10;
+    }
+    .phase-description {
+      color: #a08866;
+      font-size: 0.9em;
+      padding: 0 15px 8px;
+      font-style: italic;
+    }
+    .track {
+      display: grid;
+      grid-template-columns: 56px 1fr 140px;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 15px;
+      border-bottom: 1px solid #644623;
+      margin: 0 10px;
+    }
+    .track:last-child { border-bottom: none; }
+    .track.active { 
+      background: #4d3820;
+      margin: 0;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    .play-btn {
+      width: 44px;
+      text-align: center;
+    }
+    .title { color: #e8d7b9; }
+    .meta { color: #a08866; font-size: 0.9em; }
+    .timing-note {
+      color: #c9a961;
+      font-weight: bold;
+    }
+    .host-steps {
+      background: #2c1810;
+      border: 1px solid #c9a961;
+      border-radius: 6px;
+      padding: 12px;
+    }
+    .host-steps h3 { color: #c9a961; margin-top: 0; }
+    .kbd { background: #2c1810; border: 1px solid #c9a961; padding: 2px 6px; border-radius: 4px; }
+    .footer-note { color: #a08866; font-style: italic; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎭 Portrait Narration Player (Three-Portrait)</h1>
+
+    <div class="portrait-showcase">
+      <img src="three_portraits.png" alt="The Three Magical Portraits" class="portrait-image">
+      <div class="portrait-caption">The Enchanted Portraits of the Ministry Hall</div>
+      <div class="portrait-names">
+        <strong>Crowe</strong> (left) · <strong>Nightshade</strong> (center) · <strong>Wickett</strong> (right)<br>
+        <em>"These ancient guardians will guide you through tonight's dark mystery..."</em>
+      </div>
+    </div>
+
+    <div class="notice">
+      <strong>🎮 Host Instructions:</strong> Play tracks in order through each phase. The game is divided into 5 clear phases below. 
+      Each track shows exactly what action to take (hand out evidence, start timers, conduct votes). 
+      <br><strong>Controls:</strong> <span class="kbd">Space</span> play/pause · <span class="kbd">→</span> next track · <span class="kbd">←</span> previous · <span class="kbd">J</span>/<span class="kbd">L</span> skip ±10s · Enable "Auto-advance" for seamless flow.
+    </div>
+
+    <div class="controls">
+      <audio id="player" preload="metadata"></audio>
+      <div class="button-row">
+        <button id="prev">⏮ Prev</button>
+        <button id="rew">⏪ -10s</button>
+        <button id="play">▶ Play</button>
+        <button id="ff">⏩ +10s</button>
+        <button id="next">⏭ Next</button>
+        <label><input type="checkbox" id="auto"> Auto-advance</label>
+        <label>Speed
+          <select id="speed">
+            <option value="0.9">0.9×</option>
+            <option value="1" selected>1.0×</option>
+            <option value="1.1">1.1×</option>
+            <option value="1.2">1.2×</option>
+          </select>
+        </label>
+        <label>Volume
+          <select id="vol">
+            <option value="0.6">60%</option>
+            <option value="0.8" selected>80%</option>
+            <option value="1">100%</option>
+          </select>
+        </label>
+      </div>
+      <div class="host-steps">
+        <h3>🎮 Game Phase Overview</h3>
+        <div style="display: grid; grid-template-columns: 1fr 3fr; gap: 8px; font-size: 0.95em;">
+          <strong style="color: #c9a961;">📚 Pre-Game</strong>
+          <span>Tracks 1-4: Setup, rules, introductions (15 min)</span>
+          
+          <strong style="color: #c9a961;">🎬 Game Start</strong>
+          <span>Track 5: Opening scene sets the stage</span>
+          
+          <strong style="color: #c9a961;">🔍 Round 1</strong>
+          <span>Tracks 6-9: Investigation, Evidence A, first vote (20 min)</span>
+          
+          <strong style="color: #c9a961;">🕵️ Round 2</strong>
+          <span>Tracks 10-13: Deeper inquiry, Evidence B, second vote (20 min)</span>
+          
+          <strong style="color: #c9a961;">⚡ Finale</strong>
+          <span>Tracks 14-18: Final round, accusations, reveal, scoring (25 min)</span>
+        </div>
+        <div class="footer-note">Total runtime: ~80 minutes. Click tracks in order. All timings and prompts are included in narration.</div>
+      </div>
+    </div>
+
+    <div class="playlist" id="playlist"></div>
+  </div>
+
+  <script>
+    const phases = [
+      {
+        title: '📚 PHASE 1: PRE-GAME SETUP',
+        description: 'Character distribution, rules explanation, world-building (~15 minutes)',
+        tracks: [
+          {file: '01_script_1_welcome_setup.mp3', title: 'Welcome & Setup', meta: '🎤 Distribute envelopes · Set 10-min timer'},
+          {file: '02_script_1_3_how_to_play_scoring_overview.mp3', title: 'How to Play & Scoring', meta: '📋 Rules · Rounds · Secret objectives'},
+          {file: '03_script_1_4_the_ministry_s_dark_hour.mp3', title: 'The Ministry\'s Dark Hour', meta: '🌙 Context · Previous murder · Stakes'},
+          {file: '04_script_1_5_the_hall_introductions.mp3', title: 'Character Introductions', meta: '👥 Players raise hands · Expertise areas'}
+        ]
+      },
+      {
+        title: '🎬 PHASE 2: GAME BEGINS',
+        description: 'Scene setting and atmosphere',
+        tracks: [
+          {file: '05_script_2_opening_scene.mp3', title: 'Opening Scene', meta: '🎭 The murder is discovered'}
+        ]
+      },
+      {
+        title: '🔍 PHASE 3: ROUND 1 - GATHERING SHADOWS',
+        description: 'First investigation phase (~20 minutes)',
+        tracks: [
+          {file: '06_script_3_round_1_begins_gathering_shadows.mp3', title: 'Round 1 Begins', meta: '⏱️ Start 20-min timer'},
+          {file: '07_script_4_evidence_a_distribution.mp3', title: 'Evidence A Distribution', meta: '📄 Hand out Evidence Pack A'},
+          {file: '08_script_5_five_minute_warning_round_1.mp3', title: '5-Minute Warning', meta: '⏰ Wrap up discussions'},
+          {file: '09_script_6_suspicion_vote_round_1.mp3', title: 'Suspicion Vote #1', meta: '👉 Point at most suspicious'}
+        ]
+      },
+      {
+        title: '🕵️ PHASE 4: ROUND 2 - UNRAVELING LIES',
+        description: 'Deeper investigation (~20 minutes)',
+        tracks: [
+          {file: '10_script_7_round_2_begins_unraveling_lies.mp3', title: 'Round 2 Begins', meta: '⏱️ Start 20-min timer'},
+          {file: '11_script_8_evidence_b_distribution.mp3', title: 'Evidence B Distribution', meta: '📄 Hand out Evidence Pack B'},
+          {file: '12_script_9_five_minute_warning_round_2.mp3', title: '5-Minute Warning', meta: '⏰ Prepare final theories'},
+          {file: '13_script_10_suspicion_vote_round_2.mp3', title: 'Suspicion Vote #2', meta: '👉 Point again'}
+        ]
+      },
+      {
+        title: '⚡ PHASE 5: FINALE - THE TRUTH REVEALED',
+        description: 'Final accusations, reveal, and scoring (~25 minutes)',
+        tracks: [
+          {file: '14_script_11_round_3_begins_the_truth_revealed.mp3', title: 'Round 3 Begins', meta: '💡 Final investigation'},
+          {file: '15_script_12_final_statements_preparation.mp3', title: 'Final Statements', meta: '✍️ Write theories · Present aloud'},
+          {file: '16_script_13_the_final_vote.mp3', title: 'The Final Vote', meta: '🗳️ Vote impostor & murderer'},
+          {file: '17_script_14_the_unmasking_ritual.mp3', title: 'The Unmasking Ritual', meta: '🎭 Reveal the truth!'},
+          {file: '18_script_15_scoring_phase.mp3', title: 'Scoring & Awards', meta: '🏆 Calculate points · Crown winner'}
+        ]
+      }
+    ];
+
+    // Flatten tracks for playback but keep phase info
+    const tracks = [];
+    phases.forEach(phase => {
+      phase.tracks.forEach(track => {
+        tracks.push({...track, phaseTitle: phase.title});
+      });
+    });
+
+    const player = document.getElementById('player');
+    const playlistEl = document.getElementById('playlist');
+    const playBtn = document.getElementById('play');
+    const nextBtn = document.getElementById('next');
+    const prevBtn = document.getElementById('prev');
+    const rewBtn = document.getElementById('rew');
+    const ffBtn = document.getElementById('ff');
+    const autoCb = document.getElementById('auto');
+    const speedSel = document.getElementById('speed');
+    const volSel = document.getElementById('vol');
+
+    let current = 0;
+
+    function renderPlaylist() {
+      playlistEl.innerHTML = '';
+      let trackIndex = 0;
+      
+      phases.forEach((phase, phaseIdx) => {
+        // Create phase section container
+        const section = document.createElement('div');
+        section.className = 'phase-section';
+        
+        // Add phase header
+        const header = document.createElement('div');
+        header.className = 'phase-header';
+        header.innerHTML = phase.title;
+        section.appendChild(header);
+        
+        // Add phase description
+        const desc = document.createElement('div');
+        desc.className = 'phase-description';
+        desc.innerHTML = phase.description;
+        section.appendChild(desc);
+        
+        // Add tracks for this phase
+        phase.tracks.forEach((t, trackIdx) => {
+          const row = document.createElement('div');
+          const globalIdx = trackIndex++;
+          row.className = 'track' + (globalIdx === current ? ' active' : '');
+          row.dataset.index = globalIdx;
+          
+          // Determine status text
+          let statusText = 'Click to play';
+          if (globalIdx === current && !player.paused) {
+            statusText = '🔊 Playing...';
+          } else if (globalIdx === current && player.paused) {
+            statusText = '⏸ Paused';
+          }
+          
+          row.innerHTML = `
+            <button class="play-btn" data-index="${globalIdx}">▶</button>
+            <div>
+              <div class="title">${String(globalIdx + 1).padStart(2, '0')}. ${t.title}</div>
+              <div class="meta">${t.meta}</div>
+            </div>
+            <div class="meta">${statusText}</div>
+          `;
+          
+          row.addEventListener('click', (e) => {
+            const idx = Number(row.dataset.index);
+            load(idx, true);
+          });
+          
+          section.appendChild(row);
+        });
+        
+        playlistEl.appendChild(section);
+      });
+    }
+
+    function highlight() {
+      // Remove all active classes
+      playlistEl.querySelectorAll('.track').forEach(track => {
+        track.classList.remove('active');
+        // Update status text
+        const statusEl = track.querySelector('.meta:last-child');
+        if (statusEl) statusEl.textContent = 'Click to play';
+      });
+      
+      // Add active class to current track
+      const activeTrack = playlistEl.querySelector(`[data-index="${current}"]`);
+      if (activeTrack) {
+        activeTrack.classList.add('active');
+        const statusEl = activeTrack.querySelector('.meta:last-child');
+        if (statusEl) {
+          statusEl.textContent = player.paused ? '⏸ Paused' : '🔊 Playing...';
+        }
+        // Scroll into view if needed
+        activeTrack.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    function load(index, autoplay=false) {
+      current = index;
+      player.src = tracks[current].file;
+      player.playbackRate = Number(speedSel.value);
+      player.volume = Number(volSel.value);
+      player.load();
+      highlight();
+      if (autoplay) player.play();
+      playBtn.textContent = '⏸ Pause';
+    }
+
+    function playPause() {
+      if (player.paused) {
+        player.play();
+        playBtn.textContent = '⏸ Pause';
+      } else {
+        player.pause();
+        playBtn.textContent = '▶ Play';
+      }
+    }
+
+    function next() {
+      if (current < tracks.length - 1) {
+        load(current + 1, true);
+      }
+    }
+    function prev() {
+      if (current > 0) {
+        load(current - 1, true);
+      }
+    }
+
+    // Controls
+    playBtn.addEventListener('click', playPause);
+    nextBtn.addEventListener('click', next);
+    prevBtn.addEventListener('click', prev);
+    rewBtn.addEventListener('click', () => { player.currentTime = Math.max(0, player.currentTime - 10); });
+    ffBtn.addEventListener('click', () => { player.currentTime = Math.min(player.duration || 1e9, player.currentTime + 10); });
+    speedSel.addEventListener('change', () => player.playbackRate = Number(speedSel.value));
+    volSel.addEventListener('change', () => player.volume = Number(volSel.value));
+
+    // Audio event handlers
+    player.addEventListener('play', () => {
+      playBtn.textContent = '⏸ Pause';
+      highlight();
+    });
+    
+    player.addEventListener('pause', () => {
+      playBtn.textContent = '▶ Play';
+      highlight();
+    });
+    
+    player.addEventListener('ended', () => {
+      if (autoCb.checked) {
+        next();
+      } else {
+        playBtn.textContent = '▶ Play';
+        highlight();
+      }
+    });
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (e.key === ' ') { e.preventDefault(); playPause(); }
+      if (e.key === 'ArrowRight') next();
+      if (e.key === 'ArrowLeft') prev();
+      if (e.key.toLowerCase() === 'j') player.currentTime = Math.max(0, player.currentTime - 10);
+      if (e.key.toLowerCase() === 'l') player.currentTime = Math.min(player.duration || 1e9, player.currentTime + 10);
+    });
+
+    // Initialize
+    renderPlaylist();
+    load(0, false);
+  </script>
+</body>
+</html>

@@ -7,31 +7,33 @@
 
 **Player Name:** ___________________ **Character:** ___________________
 
-### Round 1 Objectives (1 point each)
+Global rule: You may claim up to any two objectives in each category (Round 1, Round 2, Round 3, Social). Complete more for story, but only two score per category.
+
+### Round 1 Objectives (1 point each - claim any 2)
 - [ ] Established my timeline for 7:00-8:00 PM
 - [ ] Learned 2 other players' claimed locations  
 - [ ] Identified someone with restricted access
 - [ ] Shared or discovered evidence
 
-**Round 1 Subtotal:** _____ / 4
+**Round 1 Subtotal:** _____ / 2
 
-### Round 2 Objectives (2 points each)  
+### Round 2 Objectives (2 points each - claim any 2)  
 - [ ] Exposed a contradiction in someone's story
 - [ ] Formed an alliance with another player
 - [ ] Correctly identified a spell or potion's effects
 - [ ] Got someone to admit to a secret
 
-**Round 2 Subtotal:** _____ / 8
+**Round 2 Subtotal:** _____ / 4
 
-### Round 3 Objectives (3 points each)
+### Round 3 Objectives (3 points each - claim any 2)
 - [ ] Presented a complete theory of the crime
 - [ ] Rallied 2+ players to my theory
 - [ ] Correctly predicted who would be most suspected
 - [ ] Used my special ability effectively
 
-**Round 3 Subtotal:** _____ / 12
+**Round 3 Subtotal:** _____ / 6
 
-### Social Objectives (1 point each, max 5)
+### Social Objectives (1 point each - claim any 2)
 - [ ] Got elected as group spokesperson
 - [ ] Mediated a heated argument
 - [ ] Extracted a private confession
@@ -39,7 +41,7 @@
 - [ ] Protected someone from false accusation
 - [ ] Other: _______________________
 
-**Social Subtotal:** _____ / 5
+**Social Subtotal:** _____ / 2
 
 ### Core Mystery Points
 - [ ] Correctly identified the impostor (5 pts): _____
@@ -89,7 +91,7 @@
 
 ### Player Tracking Grid
 
-| Player Name | Character | R1 (4) | R2 (8) | R3 (12) | Social (5) | Mystery (19) | Secret (9) | Awards (10) | Bonus | TOTAL |
+| Player Name | Character | R1 (2) | R2 (4) | R3 (6) | Social (2) | Mystery (19) | Secret (9) | Awards (10) | Bonus | TOTAL |
 |------------|-----------|--------|--------|---------|------------|--------------|------------|-------------|--------|--------|
 | | | | | | | | | | | |
 | | | | | | | | | | | |
@@ -107,9 +109,9 @@
 ### Quick Reference - Point Values
 
 **Round Objectives:**
-- R1: 1 pt each (4 total)
-- R2: 2 pts each (8 total)  
-- R3: 3 pts each (12 total)
+- R1: 1 pt each (claim any 2, max 2)
+- R2: 2 pts each (claim any 2, max 4)  
+- R3: 3 pts each (claim any 2, max 6)
 
 **Core Mystery:**
 - Correct impostor: 5
@@ -132,6 +134,40 @@
 - Murderer frames other: 5
 
 **Awards:** 2 pts each
+
+### Suspicion Vote Tracking
+
+| Player | Round 1 Votes Received | Round 2 Votes Received | Most Suspected? |
+|--------|------------------------|------------------------|------------------|
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+
+### Special Ability Usage
+
+| Player | Ability Used? | When/How | Impact |
+|--------|---------------|----------|--------|
+| | [ ] | | |
+| | [ ] | | |
+| | [ ] | | |
+| | [ ] | | |
+| | [ ] | | |
+| | [ ] | | |
+| | [ ] | | |
+| | [ ] | | |
+| | [ ] | | |
+| | [ ] | | |
+| | [ ] | | |
+| | [ ] | | |
 
 ### Evidence Tracking (for "first to notice" points)
 
@@ -188,11 +224,13 @@ _________________________________
 
 ### During Game
 - [ ] Track Round 1 objectives
+- [ ] Conduct Round 1 suspicion vote
 - [ ] Note first evidence discoveries
 - [ ] Track Round 2 objectives
+- [ ] Conduct Round 2 suspicion vote
 - [ ] Monitor alliances formed
 - [ ] Track Round 3 objectives
-- [ ] Note special ability usage
+- [ ] Note special ability usage (one per player)
 
 ### Scoring Phase
 - [ ] Reveal impostor/murderer

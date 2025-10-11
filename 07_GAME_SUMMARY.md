@@ -45,6 +45,22 @@ These may be the same person or different people. Evidence will guide you, but d
 
 ---
 
+## Special Abilities (Optional Spell Cards)
+
+Each character has ONE special ability they can use during the game:
+- **Usage:** Most abilities can be used ONCE per game
+- **Timing:** Use at any point during investigation rounds (not during voting)
+- **Declaration:** Announce clearly when using your ability
+- **Effect:** Follow the specific instructions on your spell card
+- **Strategy:** Save for crucial moments - you only get one shot!
+
+Examples:
+- Minister's Authority Seal forces one truthful answer
+- Commander's Auror's Insight challenges contradictions
+- Archivist's Perfect Recall establishes facts
+
+---
+
 ## Essential Rules
 
 ### What You CAN Do:
@@ -60,6 +76,7 @@ These may be the same person or different people. Evidence will guide you, but d
 ✗ **Break** character to discuss the game mechanics  
 ✗ **Use** outside knowledge about the murder mystery genre  
 ✗ **Physically** intimidate or touch other players  
+✗ **Use** your special ability more than once (unless specified)  
 
 ---
 

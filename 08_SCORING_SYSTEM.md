@@ -14,10 +14,11 @@ Players compete for points through investigation, roleplay, and achieving person
 ### Core Mystery Points (All Players)
 
 #### Investigation Success
-- **Correctly identify the impostor:** 5 points
-- **Correctly identify the murderer:** 5 points
-- **First to correctly accuse (with evidence):** 2 bonus points
-- **Provide key evidence that leads to correct accusation:** 1 point each (max 3)
+- **Correctly identify the impostor:** 8 points
+- **Correctly identify the murderer:** 8 points
+- **First to correctly accuse (with evidence):** 3 bonus points
+- **Provide key evidence that leads to correct accusation:** 2 points each (max 3)
+- **Group Success Bonus:** If majority correctly identifies both, all who voted correctly get +3 points
 
 #### Alibi & Defense
 - **Establish verifiable alibi (confirmed by 2+ players):** 2 points
@@ -53,25 +54,27 @@ Players compete for points through investigation, roleplay, and achieving person
 
 ## Public Objectives (All Players Know These)
 
-### Round 1 Objectives (1 point each)
+Global objectives cap: In each objectives category below (Round 1, Round 2, Round 3, Social), each player may claim up to any two items for points. You can complete more for roleplay/story, but only two score per category.
+
+### Round 1 Objectives (1 point each - claim any 2)
 - Establish your timeline for 7:00-8:00 PM
 - Learn two other players' claimed locations
 - Identify one person with access to restricted areas
 - Share or discover one piece of evidence
 
-### Round 2 Objectives (2 points each)
+### Round 2 Objectives (2 points each - claim any 2)
 - Expose one contradiction in someone's story
 - Form an alliance with at least one player
 - Correctly identify a spell or potion's effects
 - Get someone to admit to a secret (any secret)
 
-### Round 3 Objectives (3 points each)
+### Round 3 Objectives (3 points each - claim any 2)
 - Present a complete theory of the crime
 - Rally 2+ players to your theory
 - Correctly predict who will be most suspected
 - Use your special ability effectively (if applicable)
 
-### Social Objectives (1 point each, max 5 total)
+### Social Objectives (1 point each - claim any 2)
 - Get elected as group spokesperson
 - Mediate a heated argument
 - Extract a private confession
@@ -84,7 +87,7 @@ Players compete for points through investigation, roleplay, and achieving person
 
 *Each character receives 3 secret objectives worth 2-4 points. These are revealed only during scoring. Examples:*
 
-### Minister Pyke (Example Only)
+### Minister Thorne (Example Only)
 - **Authority Maintained (4 pts):** Never have your authority questioned publicly
 - **Cover-Up Success (3 pts):** Keep the Transmorph authorization secret through Round 2
 - **Political Victory (2 pts):** End with more allies than Commander Keats
@@ -139,9 +142,9 @@ Players compete for points through investigation, roleplay, and achieving person
 - **Magical Authority (3 pts):** Be consulted on all spell-related evidence
 - **Contingency Plan (2 pts):** Reveal you prepared for this scenario
 
-### Agent Vale (Example Only)
+### Agent Blackwood (Example Only)
 - **Deep Cover (4 pts):** Maintain cover through Round 2
-- **Revenge Plot (3 pts):** Get Minister Pyke suspected
+- **Revenge Plot (3 pts):** Get Minister Thorne suspected
 - **Identity Crisis (2 pts):** Create doubt about everyone's identity
 
 ---
@@ -200,25 +203,25 @@ Players compete for points through investigation, roleplay, and achieving person
 
 ### Public Objectives Checklist
 
-**Round 1 (1 pt each)**
+**Round 1 (1 pt each, claim any 2)**
 - [ ] Establish timeline
 - [ ] Learn 2 locations
 - [ ] ID restricted access
 - [ ] Share/find evidence
 
-**Round 2 (2 pts each)**
+**Round 2 (2 pts each, claim any 2)**
 - [ ] Expose contradiction
 - [ ] Form alliance
 - [ ] Identify spell/potion
 - [ ] Extract secret
 
-**Round 3 (3 pts each)**
+**Round 3 (3 pts each, claim any 2)**
 - [ ] Present theory
 - [ ] Rally 2+ players
 - [ ] Predict suspects
 - [ ] Use special ability
 
-**Social (1 pt each, max 5)**
+**Social (1 pt each, claim any 2)**
 - [ ] Become spokesperson
 - [ ] Mediate argument
 - [ ] Private confession

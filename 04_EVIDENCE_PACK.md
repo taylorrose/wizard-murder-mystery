@@ -14,6 +14,13 @@ Each evidence piece includes both a visual representation and the text version f
 
 ---
 
+## How to Read Evidence (Say this aloud once)
+When examining evidence, ask yourself:
+- **What does it literally show?** Read the facts first
+- **Why does it matter tonight?** Connect it to the timeline
+- **Who does it help or hurt?** Consider alibis and motives
+- **What should we check next?** Follow the leads
+
 ## Printing Instructions
 1. Print pages single-sided for easier cutting
 2. Cut along the dotted lines (- - - -)
@@ -38,7 +45,7 @@ Each evidence piece includes both a visual representation and the text version f
 ║   ...morph Pot...                  ║
 ║   Batch #221B                       ║
 ║   Brewed: [3 days ago]              ║
-║   Authorization: O. Py...           ║
+║   Authorization: A. Th...           ║
 ║   For: Au... train...              ║
 ║   RESTRICTED - LEVEL 5 CL...        ║
 ║   Ingredients verified by...        ║
@@ -49,7 +56,7 @@ Each evidence piece includes both a visual representation and the text version f
 *Found clutched in the victim's hand. Label appears deliberately torn.*
 
 **Release Timing:** Round 1 - Evidence A  
-**Investigative Value:** Links to Minister Pyke's authorization and enhanced formula
+**Investigative Value:** Links to Minister Thorne's authorization and enhanced formula
 
 ✂ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -90,9 +97,9 @@ Hall of Enigmas Access Record
 
 18:45 - A. Bodd - ENTERED
 19:02 - [CORRUPTED DATA]
-19:15 - M. Vale - SCHEDULED ENTRY (not logged)
+19:15 - S. Blackwood - SCHEDULED ENTRY (not logged)
 19:23 - [CORRUPTED DATA]  
-19:31 - O. Pyke - PROXIMATE (Minister's Office)
+19:31 - A. Thorne - PROXIMATE (Minister's Office)
 19:42 - T. Bales - PROXIMATE (Artifact Vault)
 19:47 - ALARM TRIGGERED
 19:48 - ALL ENTRIES SEALED
@@ -125,7 +132,7 @@ Day 12 of Memory Extraction Project
 The Minister insists on transparency but 
 someone ELSE wants this buried. Why?
 
-Vale's records don't match. Vane confirmed—
+Blackwood's records don't match. Vane confirmed—
 no history before 5 years ago. Identity 
 constructed? But by whom?
 
@@ -133,8 +140,8 @@ Must be careful. The Mirror could reveal
 truth but T.B. says it's secured. Don't 
 believe him—old friends protect each other.
 
-Remember: "R. Kett" - This name keeps appearing 
-in removed files. Who is R. Kett???
+Remember: "M. Cross" - This name keeps appearing 
+in removed files. Who is M. Cross???
 
 If something happens to me, check the Time Room. 
 Mire knows more than he admits.
@@ -144,7 +151,7 @@ Even the Minister may not be the Minister.
 ```
 
 **Release Timing:** Round 2 - Evidence B  
-**Investigative Value:** Points to Vale/Kett identity and paranoia
+**Investigative Value:** Points to Blackwood/Cross identity and paranoia
 
 ✂ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -221,7 +228,7 @@ NOCTURN ALLEY APOTHECARY
 "No Questions Asked"
 
 Date: [One week ago]
-Customer: R. Kett (paid in untraceable gold)
+Customer: M. Cross (paid in untraceable gold)
 
 Items Purchased:
 - Metamorphmagus Hair (2 strands) - 500G
@@ -238,7 +245,7 @@ Signed: "Justice Delayed is Justice Denied"
 ```
 
 **Release Timing:** Round 2 - Evidence B  
-**Investigative Value:** Identifies R. Kett as impostor, shows planning
+**Investigative Value:** Identifies M. Cross as impostor, shows planning
 
 ✂ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -341,7 +348,7 @@ that might reveal the truth.
 If something happens to me, know this:
 - The corruption goes deeper than imagined
 - Check the Transmorph authorization logs
-- "Vale" is significant somehow
+- "Blackwood" is significant somehow
 - Trust no one who joined within 5 years
 
 The Ministry's foundation is compromised.
@@ -435,9 +442,9 @@ they ARE the impostor?
 - Multiple suspects have opportunity
 
 ### Round 2 (Evidence B)
-- Reveals "R. Kett" identity
+- Reveals "M. Cross" identity
 - Shows premeditation
-- Connects to Vale's missing history
+- Connects to Blackwood's missing history
 - Introduces previous Minister subplot
 
 ### Round 3 (Evidence C)

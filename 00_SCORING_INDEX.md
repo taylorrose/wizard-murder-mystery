@@ -3,6 +3,34 @@
 
 ---
 
+## NEW: Portrait Narration System
+
+Make hosting effortless with the magical portrait guides!
+
+**Document 00: PORTRAIT_SCRIPTS.md** (Original Three-Portrait Version)
+- Three entertaining portrait characters with banter
+- More complex but very entertaining
+- Requires more audio credits/voice actors
+
+**Document 00: PORTRAIT_SCRIPTS_SINGLE.md** (RECOMMENDED - Single Portrait)
+- One narrator: Archibald Blackthorne, former Chief Inquisitor
+- All the same content, simplified for one voice
+- Much more feasible for audio generation
+- Includes all timing, instructions, and emergency scripts
+
+**Document 00a: HOST_QUICK_REFERENCE.md**
+- One-page visual timeline
+- Shows exactly when to play/read each script
+- Lists all physical actions needed
+- Perfect for first-time hosts
+
+**Audio Generation Scripts:**
+- `generate_single_portrait_audio.py` - Creates MP3 files for all tracks
+- Uses ElevenLabs API with tested settings
+- Generates 15 main tracks + emergency scripts
+
+---
+
 ## New Scoring System Documents
 
 The game has been enhanced with a competitive scoring system. Here's what's new:
